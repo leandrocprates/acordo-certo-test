@@ -8,39 +8,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
-/*
-        @Autowired
-        AlunoRepository alunoRepository ; 
-*/    
+public class DemoApplication extends SpringBootServletInitializer { 
+
+    
+    
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-        
-        
         @Override
-        public void run(String... args) throws Exception {
-        /*    
-            Aluno aluno = new Aluno() ;
-            aluno.setEndereço("Avenida Joao Pessoa 408 ");
-            aluno.setHabilitado(Boolean.TRUE);
-            aluno.setNome("Leandro Prates");
-            aluno.setPais(Pais.BRASIL);
-            
-            alunoRepository.save(aluno) ; 
-            
-            Optional<Aluno> optional = alunoRepository.findById(1L);
-            if ( optional.isPresent() ) {
-                Aluno alunoRetorno = optional.get() ;
-                System.out.println("Saida Id Aluno : " + alunoRetorno.getId());
-            }
-            
-        */    
-        }
+        protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+            return application.sources(DemoApplication.class);
+        }        
 
         
 
