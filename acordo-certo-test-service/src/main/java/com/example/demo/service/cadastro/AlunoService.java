@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.example.service.cadastro;
+package com.example.demo.service.cadastro;
 
 import com.example.demo.model.Aluno;
 import com.example.demo.repository.AlunoRepository;

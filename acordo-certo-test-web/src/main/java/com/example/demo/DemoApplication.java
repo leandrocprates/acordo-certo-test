@@ -9,23 +9,22 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/*
 
 @SpringBootApplication
 public class DemoApplication implements CommandLineRunner {
-
+/*
         @Autowired
         AlunoRepository alunoRepository ; 
-    
-    
-    
+*/    
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
+        
+        
         @Override
         public void run(String... args) throws Exception {
-            
+        /*    
             Aluno aluno = new Aluno() ;
             aluno.setEndereço("Avenida Joao Pessoa 408 ");
             aluno.setHabilitado(Boolean.TRUE);
@@ -40,8 +39,9 @@ public class DemoApplication implements CommandLineRunner {
                 System.out.println("Saida Id Aluno : " + alunoRetorno.getId());
             }
             
-            
+        */    
         }
 
+        
+
 }
-*/
