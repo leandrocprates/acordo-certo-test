@@ -16,6 +16,7 @@
        <modules>
                <module>acordo-certo-test-domain</module>
                <module>acordo-certo-test-service</module>
+               <module>acordo-certo-test-web</module>
        </modules>
 
 	<properties>
