@@ -88,6 +88,7 @@ myAppModule.controller("oitudobem", function ($scope,$http,$sce)
         $http.delete(url)
                 .success(function (data){
                     console.log('Usuario deletado com sucesso.');
+                    $scope.chamarListaUsuarios();
                 })
                 .error(function (data){
                     console.log('Erro ao deletar usuario.');
