@@ -58,6 +58,19 @@ myAppModule.controller("oitudobem", function ($scope,$http,$sce)
     
     $scope.salvarUsuario = function(){
         console.log($scope.aluno);
+        
+        var url='http://localhost:8080/acordo-certo-test-web/usuario/criar';
+        
+        $http.post(url,$scope.aluno)
+                .success(function (data){
+                    console.log('Usuario adicionado com sucesso.');
+                })
+                .error(function (data){
+                    console.log('Erro ao adicionar usuario.');
+                });
+        
+        
+        
     }
     
     
