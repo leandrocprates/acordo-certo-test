@@ -75,6 +75,14 @@ public class UsuarioController {
         return new ResponseEntity<Aluno>(aluno, HttpStatus.OK ); 
     }
 
+    
+    @RequestMapping(value = "/{id}" , method = RequestMethod.DELETE)
+    public ResponseEntity<Aluno> deletePorId(@PathVariable Long id ){
+        alunoService.deletarUsuario(id) ; 
+        return new ResponseEntity<>(null, HttpStatus.OK );
+            
+    }
+    
 
     
 }

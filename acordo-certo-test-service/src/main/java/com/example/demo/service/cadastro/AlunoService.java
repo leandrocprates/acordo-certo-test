@@ -43,6 +43,10 @@ public class AlunoService {
             return alunoRepository.findAll();
         }
         
+        public void deletarUsuario(Long id){
+            alunoRepository.deleteById(id);
+        }
+        
         
     
 }

@@ -79,26 +79,30 @@ myAppModule.controller("oitudobem", function ($scope,$http,$sce)
     }
     
     
-    /*
-    
-    
-    $scope.adicionarRegistro = function(){
+    $scope.deletarRegistro = function(usuario){
         
-        var url='http://localhost:8080/WebServiceAngulaJS/rest/hello/addRegistro';
+        var url='http://localhost:8080/acordo-certo-test-web/usuario/' + usuario.id ;
         
-        var registro2 = {coluna:"Nome", valor:"Jose 1"};
-        registro2.usuario={nome: "Jose 2", telefone:"1122333018"};
+        console.log('Url delete: ' + url );
         
-        
-        $http.post(url,registro2)
+        $http.delete(url)
                 .success(function (data){
-                    console.log('Usuario adicionado com sucesso.');
+                    console.log('Usuario deletado com sucesso.');
                 })
                 .error(function (data){
-                    console.log('Erro ao adicionar usuario.');
+                    console.log('Erro ao deletar usuario.');
                 });
-    };
-
+        
+    
+    
+    };    
+    
+    
+    
+    
+    
+    /*
+    
     
     $scope.deletarRegistro = function(){
         
