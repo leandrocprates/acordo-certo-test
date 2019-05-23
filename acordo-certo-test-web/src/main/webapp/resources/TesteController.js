@@ -52,7 +52,12 @@ myAppModule.controller("oitudobem", function ($scope,$http,$sce)
     
     $scope.renderizaformulario = function(){
         $scope.mostrarLista=false; 
-    }
+    };
+    
+    $scope.renderizaLista = function(){
+        $scope.mostrarLista=true; 
+    };
+
     
     
     
@@ -64,12 +69,12 @@ myAppModule.controller("oitudobem", function ($scope,$http,$sce)
         $http.post(url,$scope.aluno)
                 .success(function (data){
                     console.log('Usuario adicionado com sucesso.');
+                    $scope.renderizaLista();
+                    $scope.chamarListaUsuarios(); 
                 })
                 .error(function (data){
                     console.log('Erro ao adicionar usuario.');
                 });
-        
-        
         
     }
     
