@@ -13,7 +13,7 @@ myAppModule.controller("oitudobem", function ($scope,$http,$sce)
     $scope.person = {firstName:"John Maluco", lastName:"Doe", age:50, eyeColor:"blue"};
     
     $scope.listaUsuarios;
-    
+    $scope.mostrarLista=true; 
     
     $scope.chamarListaUsuarios = function(){
         
@@ -31,6 +31,12 @@ myAppModule.controller("oitudobem", function ($scope,$http,$sce)
     
     
     $scope.chamarListaUsuarios(); //busca inicial da lista de usuarios 
+    
+    
+    $scope.renderizaformulario = function(){
+        $scope.mostrarLista=false; 
+    }
+    
     
     /*
     
