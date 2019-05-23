@@ -11,6 +11,23 @@ var myAppModule = angular.module('mainApp', ['ngSanitize']);
 myAppModule.controller("oitudobem", function ($scope,$http,$sce)
 {
     $scope.person = {firstName:"John Maluco", lastName:"Doe", age:50, eyeColor:"blue"};
+
+    
+    $scope.aluno = {
+        id: null,
+        nome : null , 
+        endereco : null , 
+        pais : null , 
+        habilitado : null 
+    };
+    
+    
+    $scope.listaPais = [ 
+          {name: 'BRASIL'},
+          {name: 'ESTADOS_UNIDOS'},
+          {name: 'INGLATERRA'}
+         ] ;    
+    
     
     $scope.listaUsuarios;
     $scope.mostrarLista=true; 
@@ -35,6 +52,12 @@ myAppModule.controller("oitudobem", function ($scope,$http,$sce)
     
     $scope.renderizaformulario = function(){
         $scope.mostrarLista=false; 
+    }
+    
+    
+    
+    $scope.salvarUsuario = function(){
+        console.log($scope.aluno);
     }
     
     

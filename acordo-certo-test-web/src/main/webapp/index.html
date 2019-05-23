@@ -68,34 +68,45 @@
                 
                 <form>
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                    <label for="inputnome" class="col-sm-2 col-form-label">Nome</label>
                     <div class="col-sm-10">
-                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                      <input type="text" ng-model="aluno.nome"  class="form-control" id="inputnome" placeholder="Nome">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                    <label for="inputendereco" class="col-sm-2 col-form-label">Endereco</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                      <input type="text" ng-model="aluno.endereco" class="form-control" id="inputendereco" placeholder="Endereco">
                     </div>
                   </div>
 
                   <div class="form-group row">
-                    <div class="col-sm-2">Checkbox</div>
+                    <div class="col-sm-2">Habilitado</div>
                     <div class="col-sm-10">
                       <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck1">
+                        <input class="form-check-input" ng-model="aluno.habilitado"  type="checkbox" id="gridCheck1">
                         <label class="form-check-label" for="gridCheck1">
-                          Example checkbox
+                          Habilitado
                         </label>
                       </div>
                     </div>
                   </div>
+                    
+                <div class="form-group row">
+                    <div class="col-sm-2">Pais</div>
+                    <div class="col-sm-10">
+                        <select class="form-control" ng-model="aluno.pais" ng-options="pais.name for pais in listaPais"></select>
+                    </div>
+                </div>  
+
+                    
+                    
                   <div class="form-group row">
                     <div class="col-sm-10">
                       <button type="submit" class="btn btn-primary" ng-click="salvarUsuario()" >Salvar</button>
                     </div>
                   </div>
+                    
                 </form>                   
 
                 
