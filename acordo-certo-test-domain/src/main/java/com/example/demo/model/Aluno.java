@@ -28,7 +28,7 @@ public class Aluno {
     @GeneratedValue(strategy=GenerationType.AUTO)    
     private Long id;
     private String nome;
-    private String endereço;
+    private String endereco;
     @Enumerated(EnumType.STRING)
     private Pais pais; 
     private Boolean habilitado;
