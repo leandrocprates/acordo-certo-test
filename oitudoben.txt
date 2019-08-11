@@ -1,5 +1,5 @@
 ola este e mais um tetse 
-teste local 2 linha
+teste local 2 linha (editada no servidor)
 3 linha local linhas
 vamos testar o git merge 2 linha servidor
 teste 3 linha servidor (editado no local)
